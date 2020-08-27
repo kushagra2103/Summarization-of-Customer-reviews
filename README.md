@@ -30,7 +30,9 @@ Department Name: Categorical name of the product department name.
 
 Class Name: Categorical name of the product class name.
 
-Here only the "Title" and "Review Text" will be used. 
+#### We will be using the Title and reviews Text for summarization.
+
+## Theory Behind the Encoder-Decoder Sequential Model 
 
 
 
