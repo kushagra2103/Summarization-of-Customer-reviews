@@ -34,6 +34,15 @@ Class Name: Categorical name of the product class name.
 
 ## Theory Behind the Encoder-Decoder Sequential Model 
 
+### LSTM Cell
+
+![1](https://user-images.githubusercontent.com/36281158/91410373-71b0b080-e864-11ea-91ad-a78d92581f75.PNG)
+
+Here 'h' represents the hidden state, 'c' represents the cell state, 't' represents the  current time stamp. 
+
+![2](https://user-images.githubusercontent.com/36281158/91412893-010b9300-e868-11ea-9043-c39356a37e31.PNG)
+
+The LSTM has four parts; forget gate, update gate,  
 
 
 
