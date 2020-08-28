@@ -69,6 +69,13 @@ It has an input layer that decides what values we need to update (like from male
 Now to decide what goes to output, a output sigmoid function is again defined same as forget gate. It is responsible to pass the information that a context has changed and it might output the information relevant to the "new" context. So multiplied by tanh(ct) and is output as ht. For final output, a dense layer is applied to each time step/ last time step depending upon whether it is many to many / many to one structure.  
 
 
+### Encoder-Decoder Sequential Model 
+
+![8](https://user-images.githubusercontent.com/36281158/91533315-5067c700-e92d-11ea-83e8-c2aeafa04026.png)
+
+
+
+
 
 
 
