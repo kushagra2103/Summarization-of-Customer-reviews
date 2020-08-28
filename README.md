@@ -73,6 +73,18 @@ Now to decide what goes to output, a output sigmoid function is again defined sa
 
 ![8](https://user-images.githubusercontent.com/36281158/91533315-5067c700-e92d-11ea-83e8-c2aeafa04026.png)
 
+#### Summary of the above model 
+
+1. Both the encoder and decoder have LSTM cells as units
+
+2. Encoder reads the input text in form of time steps, embedding layer converts it into the word embeddings and all the information in defined number of time steps are passed as initial vectors for decoder; c(cell state) and h (hidden state)
+
+3. Decoder model then predicts the outputs at every time step , where the output at previous time step is feed as an input to the next time step to predict the next output.
+
+4. Output at every time step from decoder model is then combined and the resultant summary is formed
+
+
+#### Encoder Model 
 
 
 
