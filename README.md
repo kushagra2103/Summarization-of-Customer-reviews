@@ -84,7 +84,7 @@ Now to decide what goes to output, a output sigmoid function is again defined sa
 4. Output at every time step from decoder model is then combined and the resultant summary is formed
 
 
-### Text Cleaning and Preprocessing 
+## Text Cleaning and Preprocessing 
 
 Before the data is split into training and testing, our data contains a lot of noise which are needed to remove in order for our model to predict better.
 
@@ -109,7 +109,7 @@ here the text is cleaned part.
 Tokenize the text and summary part respectively by importing tokenizer from keras.preprocessing.text. It is done because the model only understands the numbers. So tokenizer will create a vocabulary of all the unique words present in the text and summary corpus and will make a word-index pair. Here I have choosen vocabulary length for text part to be 5000 and for summary part 3000. The numbers represent the top words by frequency present in the respective corpus. You can have a choice of including all the unique words by getting the value of len(x_tokenizer.word_index) + 1; here x_tokenizer is created by training it on training 'text' data, same goes for 'summary' data as well
 
 
-### Model Development 
+## Model Development 
 
 ![14](https://user-images.githubusercontent.com/36281158/91577917-0f8ca400-e967-11ea-87bb-926594fa3a4d.png)
 
