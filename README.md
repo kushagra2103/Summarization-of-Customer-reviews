@@ -42,7 +42,15 @@ Here 'h' represents the hidden state, 'c' represents the cell state, 't' represe
 
 ![2](https://user-images.githubusercontent.com/36281158/91412893-010b9300-e868-11ea-9043-c39356a37e31.PNG)
 
-The LSTM has four parts; forget gate, update gate,  
+The LSTM has three parts; forget gate, update gate and output gate. 
+
+#### How the cell works ?
+
+Gates are a way to optionally let information through. They are composed out of a sigmoid neural net layer and a pointwise multiplication operation. The sigmoid layer outputs numbers between zero and one, describing how much of each component should be let through. A value of zero means “let nothing through,” while a value of one means “let everything through!”
+
+##### Forget Gate 
+
+![3](https://user-images.githubusercontent.com/36281158/91521094-8187cd80-e914-11ea-85ab-28c0521bda50.PNG)
 
 
 
