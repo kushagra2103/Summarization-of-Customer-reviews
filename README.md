@@ -64,6 +64,10 @@ It has an input layer that decides what values we need to update (like from male
 
 ##### Output Gate 
 
+![6](https://user-images.githubusercontent.com/36281158/91530085-19db7d80-e928-11ea-98ab-ec53415439c7.PNG)
+
+Now to decide what goes to output, a output sigmoid function is again defined same as forget gate. It is responsible to pass the information that a context has changed and it might output the information relevant to the "new" context. So multiplied by tanh(ct) and is output as ht. For final output, a dense layer is applied to each time step/ last time step depending upon whether it is many to many / many to one structure.  
+
 
 
 
