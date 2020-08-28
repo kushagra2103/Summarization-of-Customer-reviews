@@ -84,8 +84,25 @@ Now to decide what goes to output, a output sigmoid function is again defined sa
 4. Output at every time step from decoder model is then combined and the resultant summary is formed
 
 
-#### Encoder Model 
+### Text Cleaning and Preprocessing 
 
+Before the data is split into training and testing, our data contains a lot of noise which are needed to remove in order for our model to predict better.
+
+1. Missing data 
+
+There are some missing data in both Review Text and Title, they needed to be removed, I have used "dropna" function which basically removes all the rows which has atleast one missing data 
+
+2. Noise 
+
+There are noise in form of special characters, capital/small letters, punctuations, numbers, short forms like in place of 'is not' it is 'isn't', one letter words, stop_words etc which are needed to be removed in order to improve the quality of the data our model will feed upon.
+
+![12](https://user-images.githubusercontent.com/36281158/91565820-68a50980-e960-11ea-9ca8-4d43ce86efe2.PNG)
+
+here the text is cleaned part.
+
+3. Defining the fix length for input to encoder and output for decoder; in short defining the time steps for encoder and decoder. Seeing the histograms, we can fix the input time steps to be 50 and for output to be 7. It means each example will have max length of 50, if length is < 50, it will be "post paded" and if length > 50 then it will be truncated, same for output. So summary will have max length of 7, it can be< 7 also. 
+
+![13](https://user-images.githubusercontent.com/36281158/91566344-229c7580-e961-11ea-8425-400ec29a5518.PNG)
 
 
 
