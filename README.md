@@ -52,7 +52,17 @@ Gates are a way to optionally let information through. They are composed out of 
 
 ![3](https://user-images.githubusercontent.com/36281158/91521094-8187cd80-e914-11ea-85ab-28c0521bda50.PNG)
 
+This gate is primarly used for information that needs to be forget. If the context changes, for example if there is gender change (male to female) or from plural to singular or vice versa, the cell needs to remeber that context has changed. Forget gate plays a role by "not transferring" the male/ plural information to the cell state. It uses the sigmoid function which outputs 0 or 1. 0 means completely forget and 1 means retains the whole information. Wf is  a matrix which is combination of two weight s matrices for xt and ht-1. bf is the bias added. 
 
+##### Update Gate 
+
+![4](https://user-images.githubusercontent.com/36281158/91527106-b6028600-e922-11ea-804b-beb5253ee410.PNG)
+
+It has an input layer that decides what values we need to update (like from male to female/ plural to singular). So it is passed again to a neural layer network same as forget layer which ouputs 0/1 and then is multiplied by cell state c~ which will keep the new information and stored in the cell state. Now the previous cell state ct-1 and this current updated c~ are added which will form the current cell state ct which will again passed as ct-1 for the next time step.
+
+![5](https://user-images.githubusercontent.com/36281158/91527133-c581cf00-e922-11ea-8748-ac53f7c9e7f6.PNG)
+
+##### Output Gate 
 
 
 
