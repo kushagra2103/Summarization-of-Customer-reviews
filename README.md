@@ -104,9 +104,9 @@ here the text is cleaned part.
 
 ![13](https://user-images.githubusercontent.com/36281158/91566344-229c7580-e961-11ea-8425-400ec29a5518.PNG)
 
-4. Tokenization 
+4. Tokenization and Padding
 
-Tokenize the text and summary part respectively by importing tokenizer from keras.preprocessing.text. It is done because the model only understands the numbers. So tokenizer will create a vocabulary of all the unique words present in the text and summary corpus and will make a word-index pair. Here I have choosen vocabulary length for text part to be 5000 and for summary part 3000. The numbers represent the top words by frequency present in the respective corpus. You can have a choice of including all the unique words by getting the value of len(x_tokenizer.word_index) + 1; here x_tokenizer is created by training it on training 'text' data, same goes for 'summary' data as well
+Tokenize the text and summary part respectively by importing tokenizer from keras.preprocessing.text. It is done because the model only understands the numbers. So tokenizer will create a vocabulary of all the unique words present in the text and summary corpus and will make a word-index pair. Here I have choosen vocabulary length for text part to be 5000 and for summary part 3000. The numbers represent the top words by frequency present in the respective corpus. You can have a choice of including all the unique words by getting the value of len(x_tokenizer.word_index) + 1; here x_tokenizer is created by training it on training 'text' data, same goes for 'summary' data as well. Post padding is done to make the input and output of fix size (50 and 7 respectively). 
 
 
 ## Model Development 
@@ -115,7 +115,15 @@ Tokenize the text and summary part respectively by importing tokenizer from kera
 
 #### How the model works ?
 
-In the above pic, u1, u2 .... uT represents the inputs given to the model with T= 50 in our case. c represents the cell state, h represents the hidden state. co is initialised to zero. Now there is a embedding layer before the input goes to LSTM units. We have choosen the number of our dimensions to be 100. So each word will be a 100 dimesion vector. After that, from the embedding layer, it goes to LSTM unit where it is combined with forget gate, update gate, input gate and output gate as explained above in LSTM section. Now each of the (Wf,bf), (Wo,bo), (Wu,bu) and (Wi,bi) are the matrices that will be same for each time step, W is the weight matrix and b is the bias for neural structure. 
+In the above pic, u1, u2 .... uT represents the inputs given to the model with T= 50 in our case. c represents the cell state, h represents the hidden state. co is initialised to zero. Now there is a embedding layer before the input goes to LSTM units. We have choosen the number of our dimensions to be 100. So each word will be a 100 dimesion vector. After that, from the embedding layer, it goes to LSTM unit where it is combined with forget gate, update gate, input gate and output gate as explained above in LSTM section. Now each of the (Wf,bf), (Wo,bo), (Wu,bu) and (Wi,bi) are the matrices that will be same for each time step, W is the weight matrix and b is the bias for neural structure. cT and hT are then passed as initial states to decoder network. Decoder part behaves different in training and inference phase 
+
+Training Phase: Here the actual output is fed at each time step to make it learn faster. Then error is backpropogated through back in time. 
+
+Inference Phase: Here the actual output from the previous time step is fed as inuput for next time step in the decoder model. We are taking the word with maximum probability (greedy algorithm).
+
+"Start" token is given as initial input for the decoder model to start producing the output both in the training and inference phase. Output from the LSTM layer is then passed to first a Time Distriuted Dense layer (tanh) and then again to Time Distriuted Dense layer (softmax). Time distributed layer applies the same activation function at every time step. Dense function is applied to make the output in the desired vector. In our case we have applied 2 dense layers. So hidden state from each LSTM unit in decoder model is passed through first a dense layer of tanh (300 neuron layer) and then a softmax layer (y_vocab=3001; number of neurons to predict each word in in the vocab with their probablities). Then the word with maximum probablity is taken as the output for that time step. 
+
+
 
 
 
