@@ -123,6 +123,11 @@ Inference Phase: Here the actual output from the previous time step is fed as in
 
 "Start" token is given as initial input for the decoder model to start producing the output both in the training and inference phase. Output from the LSTM layer is then passed to first a Time Distriuted Dense layer (tanh) and then again to Time Distriuted Dense layer (softmax). Time distributed layer applies the same activation function at every time step. Dense function is applied to make the output in the desired vector. In our case we have applied 2 dense layers. So hidden state from each LSTM unit in decoder model is passed through first a dense layer of tanh (300 neuron layer) and then a softmax layer (y_vocab=3001; number of neurons to predict each word in in the vocab with their probablities). Then the word with maximum probablity is taken as the output for that time step. 
 
+![11](https://user-images.githubusercontent.com/36281158/91614753-bd1ba980-e99f-11ea-9dbc-d0b0085bb355.PNG)
+
+#### Structure of the model and number of parameters calculation
+
+
 
 
 
