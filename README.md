@@ -104,6 +104,12 @@ here the text is cleaned part.
 
 ![13](https://user-images.githubusercontent.com/36281158/91566344-229c7580-e961-11ea-8425-400ec29a5518.PNG)
 
+4. Tokenization 
+
+Tokenize the text and summary part respectively by importing tokenizer from keras.preprocessing.text. It is done because the model only understands the numbers. So tokenizer will create a vocabulary of all the unique words present in the text and summary corpus and will make a word-index pair. Here I have choosen vocabulary length for text part to be 5000 and for summary part 3000. The numbers represent the top words by frequency present in the respective corpus. You can have a choice of including all the unique words by getting the value of len(x_tokenizer.word_index) + 1; here x_tokenizer is created by training it on training 'text' data, same goes for 'summary' data as well
+
+
+
 
 
 
