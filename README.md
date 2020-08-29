@@ -159,7 +159,32 @@ Here the activation function used is tanh. It is a y_vocab (3001) NN structure. 
 
 Total Trainable Parameters = 2756201
 
-##### a little on the input shape to LSTM layer 
+##### A little on the input shape to LSTM layer 
+
+![15](https://user-images.githubusercontent.com/36281158/91637559-fb0fe080-ea26-11ea-9f8d-a282627c40fc.PNG)
+
+for Encoder Model 
+
+Batch size = 32
+
+Time Steps = 50 
+
+Seq_len = 100 ; each word embedding lenght 
+
+For Decoder model 
+
+Training Phase 
+
+Batch Size = 32
+
+Time Steps = 7
+
+Seq_len = 100; each word embedding dimension 
+
+
+
+
+
 
 
 
