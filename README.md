@@ -182,6 +182,13 @@ Time Steps = 7
 Seq_len = 100; each word embedding dimension 
 
 
+## Training and Results 
+
+Data is split into 90/10 % ratio. RMS prop is taken as an optimizer. Epochs is et to 50. Patience is set to 2 (means if val_loss is not decreased after 2 epochs training will stop). Batch size is taken as 32
+
+![16](https://user-images.githubusercontent.com/36281158/91641396-af1e6500-ea41-11ea-88f9-4508c0d415bd.PNG)
+
+![17](https://user-images.githubusercontent.com/36281158/91641400-b3e31900-ea41-11ea-977b-185c4cb9c34c.PNG)
 
 
 
