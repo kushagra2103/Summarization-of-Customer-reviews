@@ -159,6 +159,8 @@ Here the activation function used is tanh. It is a y_vocab (3001) NN structure. 
 
 Total Trainable Parameters = 2756201
 
+##### a little on the input shape to LSTM layer 
+
 
 
 
