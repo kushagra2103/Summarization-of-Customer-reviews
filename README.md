@@ -135,7 +135,13 @@ It is the word embedding layer that takes the input of 50 (Step size) words as o
 
 LSTM Layer
 
-Output from the embedding layer goes to LSTM layer. We have four gates. Lets calculate parameters for one gate. For forget gate, it has two inputs, one from previous hidden state and one from the embedding layer. The Wf weight matrix for the forget gate and bias are the parameters that are needed to be trained. 
+Output from the embedding layer goes to LSTM layer. We have four gates. Lets calculate parameters for one gate. For forget gate, it has two inputs, one from previous hidden state and one from the embedding layer. The Wf weight matrix for the forget gate and bias are the parameters that are needed to be trained. Weight matrix consists of two matrices, one for the hidden state (shape =(,,300)) and the one for the input matrice (shape=(,,100)) and will be interacting with the 300 neurons NN. Also we will be adding the bias parameter for every neuron (300). Total trainable parameters for forget gate is 300 * 300 + 300 * 100 + 300 = 120300. There are four gates, so total parameters for an LSTM unit in encoder is 4 * 120300 = 481200
+
+Output from the last LSTM unit (last time step) is then passed as the initial state to the decoder part as c'0
+
+##### Decoder Part 
+
+
 
 
 
