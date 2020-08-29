@@ -141,6 +141,28 @@ Output from the last LSTM unit (last time step) is then passed as the initial st
 
 ##### Decoder Part 
 
+Embedding layer 
+
+It is the word embedding layer that takes the input (output from the previous time step). It outputs in form of (word vocab length, no. of dimensions) (3001, 100). So it a weight matrix with number of weights to be trained equals to 3001 * 100 = 500100. Here the step size (T') maximum is 7. So if the previous output token is "end", then it will stop producing the output
+
+LSTM Layer
+
+Same as the one in the encoding layer. 
+
+Time Distributed Dense Layer 1
+
+Here the activation function used is tanh. It is a 300 NN structure. Output from the LSTM layer is at every time step is fed to thsi dense layer. It output is in the shape of (batch size, time steps, 300). Trainable parameters are weights matrices and the bias added for each neuron; 300 * (300 + 1) = 90300
+
+Time Distributed Dense Layer 2 
+
+Here the activation function used is tanh. It is a y_vocab (3001) NN structure. Output from the LSTM layer is at every time step is fed as an input to the next time step input. It's output is in the shape of (batch size, time steps, y_vocab). Trainable parameters are weights matrices and the bias added for each neuron; 3001 * (300 + 1) = 903301 . Here the ouput is the word in the y_vocab with the maximum probability (greedy search)
+
+Total Trainable Parameters = 2756201
+
+
+
+
+
 
 
 
