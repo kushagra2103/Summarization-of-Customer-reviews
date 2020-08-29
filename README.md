@@ -182,4 +182,3 @@ Output from the embedding layer goes to LSTM layer. We have four gates. Lets cal
 
 
 
-
