@@ -190,6 +190,76 @@ Data is split into 90/10 % ratio. RMS prop is taken as an optimizer. Epochs is e
 
 ![17](https://user-images.githubusercontent.com/36281158/91641400-b3e31900-ea41-11ea-977b-185c4cb9c34c.PNG)
 
+Here are the results on some random reviews taken from the validation set. Predicted summary is the summary predicted by our model and Actual summary that is present in the dataset 
+
+
+
+Review: I love the lace up design and bought the red xsp, fabric is a bit thin and mediocre quality, but over all happy with purchase. wish this top came in navy and white as well. even a navy/white stripe would be a fun option too. thanks you for offering this top in a petite size. :) 
+
+Actual summary: love the lace up design
+Predicted summary: beautiful and comfortable
+
+
+Review: Imo this top does run small. arms were tight in the size xs and just a bit snug in the s. top is definitely versatile. i don't usually wear peplum tops due a larger chest (34d-dd) and they usually look like maternity tops on me, however this one did not. the problem with this top is the fabric in the back of the top is shearer than i'd like. you can see every bulge and bump of your bra. i felt you'd need to cover your back with either long hair, jacket, vest or cardigan. not a deal breaker becau 
+
+Actual summary: lovely and versatile
+Predicted summary: beautiful but not for me
+
+
+Review: Hello i could not see how this dress could get anything but a 5 star review . the only thing that i thought would be a negative is that it may stag easily. other than that this dress is stunning on and i feel it runs large . i wear a sz 4 and the xs fit just right i'm 5ft 6in tall looks great with a high heel since its really long to the floor which i like as far as the shine on this dress. i love it it makes it worth the price and dresses up a casual dress . and its very comfortable . 
+
+Actual summary: stunning holiday dress
+Predicted summary: love this dress
+
+
+Review: I bought both colors. the navy is beautiful but the grey is closer to a drab beige and the color really disappointed me, i'll be returning that one. i love love the fit and feel of the sweater. it drapes wonderfully whether open or closed and it's so soft. however, the fabric pilled significantly, big pills not even little ones, where my arms touch my sides after just four wears. !!! i get that rayon is finicky but that is ridiculous. the navy is now out of stock in my size so i guess i'll try t 
+
+Actual summary: great design but fabric pills very quickly
+Predicted summary: cute but not for me
+
+
+Review: Love this sweatshirt! i'm 5'2" 110lbs and ordered the x-small. it's a little boxy but very comfy. it's definitely light peach in color and not pink, as shown. very happy with this purchase! 
+
+Actual summary: beautiful relaxed sweatshirt
+Predicted summary: cute and comfy
+
+
+Review: Tried on this maxi dress recently, hoping i would have a new dress to enjoy but the frabic is just too thin. so sad :(. unfortunately it shows every lump and bump and even wearing spanx while trying on it still showed too much. a full length slip would help but i decided to put it back. 
+
+Actual summary: wanted to love, but...
+Predicted summary: beautiful dress but
+
+
+Review: Very pretty dress but the fit is not great. i have to get help to take it off because it's tight in the shoulders. 
+
+Actual summary: pretty dress
+Predicted summary: cute dress
+
+
+Review: I bought this for an upcoming late-september seaside trip because it looked like it would be warm enough for cooler nights, but not too warm because of the open weave. i just received it yesterday, and i adore it. i got the pink color and was really torn between the green and the pink. i was hoping the pink would look more beige from far away (per one of the other reviews) and i was happy that it does. up close you can really see the pink, but from an arm's length away or more, it looks beige wi 
+
+Actual summary: great, cozy, all weather sweater
+Predicted summary: cute and comfy
+
+
+Review: Love my mother jeans and these are super cute for spring! they fit tts. i'm 5'7 and i bought my normal 25. 
+
+Actual summary: cute jeans
+Predicted summary: great fit
+
+
+Review: I agree with the other reviewers, this top is completely disappointing in every way, i could not believe it was the same top i pulled from the bag. where to begin,.......
+it runs really big
+it's short and boxy, not at all like it appears on the model, this must be pinned a lot in this picture.
+colors are completely dull in person, i really think this picture was lightened a great deal.
+fabric feels cheap and stiff
+lining is stuff and poorly sewn.
+i haven't one positive thing to say about t 
+
+Actual summary: so unflattering....nothing like picture
+Predicted summary: not for me
+
+
 
 
 
